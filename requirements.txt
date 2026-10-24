@@ -6,3 +6,5 @@ python-docx
 fastapi
 uvicorn[standard]
 rank-bm25
+google-genai
+python-dotenv
