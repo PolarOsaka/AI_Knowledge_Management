@@ -3,3 +3,6 @@ openpyxl
 pymupdf
 python-pptx
 python-docx
+fastapi
+uvicorn[standard]
+rank-bm25

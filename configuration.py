@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 # Mendapatkan direktori tempat file configuration.py ini berada
 ROOT_DIR = Path(__file__).resolve().parent
@@ -36,3 +37,11 @@ SUPPORTED_EXTENSIONS = {".pdf", ".pptx", ".docx", ".xlsx"}
 
 CHUNK_SIZE = 1200
 CHUNK_OVERLAP = 150
+
+# BM25 tokenization baseline. We will refine this later.
+TOKEN_PATTERN = re.compile(r"[a-zA-Z0-9]+(?:[._/-][a-zA-Z0-9]+)*")
+
+# Search Request in retrieval API
+# Mengatur struktur data yang wajib dikirim oleh klien saat melakukan pencarian ke endpoint /search
+MAX_LENGTH_SEARCH = 1000
+TOP_K_SEARCH = 5
